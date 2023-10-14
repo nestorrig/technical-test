@@ -1,0 +1,11 @@
+:root {
+    --primary: #38404B;
+    --secondary: #94ADCF; 
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
