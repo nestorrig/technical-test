@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+</head>
+<body>
+    <main class="main">
+        <section class="section section--addTask">
+            <h1 class="title">
+                My tasks
+            </h1>
+            <form class="form__container">
+                <label for="FormInput">
+                    <input 
+                        class="form__input" 
+                        id="FormInput" 
+                        type="text"
+                        placeholder="Add new task"
+                    >
+                </label>
+                <button class="form__button" type="button">
+                    >
+                </button>
+            </form>
+        </section>
+
+        <section class="section section--tasks">
+            <div class="tasks__box">
+                <div class="tasks__item">
+                    <input class="tasks__item__checkbox" type="checkbox">
+                    <span class="tasks__item__text">
+                        Go shopping
+                    </span>
+                </div>
+                <div class="tasks__item">
+                    <input class="tasks__item__checkbox" type="checkbox">
+                    <span class="tasks__item__text">
+                        Short Exercise
+                    </span>
+                </div>
+                <div class="tasks__item">
+                    <input class="tasks__item__checkbox" type="checkbox">
+                    <span class="tasks__item__text">
+                        Meditation
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--tasksCompleted">
+            <h2 class="title">
+                Completed
+            </h2>
+            <div class="tasks__box ">
+                <div class="tasks__item tasks__item--completed">
+                    <input class="tasks__item__checkbox" type="checkbox">
+                    <span class="tasks__item__text">
+                        Do homework
+                    </span>
+                </div>
+                <div class="tasks__item tasks__item--completed">
+                    <input class="tasks__item__checkbox" type="checkbox">
+                    <span class="tasks__item__text">
+                        Readeing
+                    </span>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
