@@ -82,7 +82,7 @@ body {
 .tasks__box {
     /* background-color: gray; */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 32px;
 }
 .tasks__item {
@@ -99,6 +99,15 @@ body {
     -5px 5px 10px 0px rgba(48, 54, 64, 0.20),
     -1px -1px 2px 0px rgba(48, 54, 64, 0.50) inset,
     1px 1px 2px 0px rgba(64, 74, 86, 0.30) inset;
+}
+.tasks__item--completed {
+    box-shadow: 
+    3px 3px 8px 0px rgba(46, 53, 62, 0.90) inset,
+    -3px -3px 6px 0px rgba(66, 75, 88, 0.9) inset,
+    3px -3px 6px 0px rgba(46, 53, 62, 0.20) inset,
+    -3px 3px 6px 0px rgba(46, 53, 62, 0.20) inset,
+    -1px -1px 2px 0px rgba(46, 53, 62, 0.50),
+    1px 1px 2px 0px rgba(66, 75, 88, 0.30);
 }
 .tasks__item__checkbox {
     display: none;

@@ -27,7 +27,7 @@
                         placeholder="Add new task"
                     >
                 </label>
-                <button class="form__button" type="button">
+                <button class="form__button" id="FormButton" type="button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
                         <path fill="none" stroke="#94ADCF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 17l5-5m0 0l-5-5"></path>
                     </svg>
@@ -36,29 +36,13 @@
         </section>
 
         <section class="section section--tasks">
-            <div class="tasks__box">
+            <div class="tasks__box" id="TasksBox">
                 <div class="tasks__item">
                     <input class="tasks__item__checkbox" type="checkbox" id="Task1">
                     <label class="tasks__item__label" for="Task1">
                     </label>
                     <span class="tasks__item__text">
-                        Go shopping
-                    </span>
-                </div>
-                <div class="tasks__item">
-                    <label class="tasks__item__label">
-                        <input class="tasks__item__checkbox" type="checkbox">
-                    </label>
-                    <span class="tasks__item__text">
-                        Short Exercise
-                    </span>
-                </div>
-                <div class="tasks__item">
-                    <label class="tasks__item__label">
-                        <input class="tasks__item__checkbox" type="checkbox">
-                    </label>
-                    <span class="tasks__item__text">
-                        Meditation
+                        check to complete a task
                     </span>
                 </div>
             </div>
@@ -68,17 +52,18 @@
             <h2 class="subtitle">
                 Completed
             </h2>
-            <div class="tasks__box ">
+            <div class="tasks__box " id="TasksCompletedBox">
                 <div class="tasks__item tasks__item--completed">
-                    <input class="tasks__item__checkbox" type="checkbox" id="Task2" checked>
-                    <label class="tasks__item__label" for="Task2">
+                    <input class="tasks__item__checkbox" type="checkbox" id="Task0" checked>
+                    <label class="tasks__item__label" for="Task0">
                     </label>
                     <span class="tasks__item__text">
-                        Go shopping
+                        check to undo the task
                     </span>
                 </div>
             </div>
         </section>
     </main>
+    <script src="./src/js/index.js"></script>
 </body>
 </html>
