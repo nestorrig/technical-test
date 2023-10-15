@@ -10,12 +10,16 @@ body {
     font-family: 'Ubuntu', sans-serif;
     background-color: var(--primary);
     color: var(--secondary);
-
 }
 
 .section {
     padding-inline: 24px;
     padding-block-start: 56px;
+    margin-inline: auto;
+    max-width: 1000px;
+}
+.section--tasksCompleted {
+    padding-block-end: 64px;
 }
 .title {
     font-size: 2.4rem;
@@ -23,22 +27,21 @@ body {
     margin-block-end: 40px;
 }
 .subtitle {
+    max-width: 450px;
+    margin-inline: auto;
+    margin-block-end: 40px;
     font-size: 1.8rem;
     font-weight: 400;
-    margin-block-end: 40px;
 }
 
 /* formulario */
-
 .form__container {
     max-width: 600px;
-    /* padding-inline-start: 40px; */
-
+    margin-inline: auto;
     padding-inline-end: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 
     border-radius: 16px;
     background: #38404B;
@@ -65,27 +68,32 @@ body {
     color: var(--secondary);
     opacity: .7;
 }
-
 .form__button {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     cursor: pointer;
+    outline: none;
     transition: all .3s;
+    border: 2px solid var(--primary);
+}
+.form__button:focus {
+    border-radius: 50%;
+    border-color: var(--secondary);
 }
 .form__button:active {
     transform: scale(.9);
 }
 
-
 /* tasks */
-
 .tasks__box {
-    /* background-color: gray; */
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    gap: 40px;
 }
 .tasks__item {
+    width: 100%;
+    max-width: 450px;
     display: flex;
     align-items: center;
     gap: 16px;
@@ -101,7 +109,7 @@ body {
     1px 1px 2px 0px rgba(64, 74, 86, 0.30) inset;
 }
 .tasks__item--completed {
-    box-shadow: 
+    box-shadow:
     3px 3px 8px 0px rgba(46, 53, 62, 0.90) inset,
     -3px -3px 6px 0px rgba(66, 75, 88, 0.9) inset,
     3px -3px 6px 0px rgba(46, 53, 62, 0.20) inset,
@@ -133,11 +141,15 @@ body {
 .tasks__item__checkbox:checked ~ .tasks__item__text::after  {
     transform: scaleX(100%);
 }
+.tasks__item__checkbox:checked ~ .tasks__item__text {
+    opacity: .6;
+}
 .tasks__item__text {
     position: relative;
     font-size: 1.6rem;
     font-weight: 500;
     transition: all .3s;
+    display: block;
 }
 .tasks__item__text::after {
     transition: all .3s;
@@ -152,4 +164,20 @@ body {
     transform-origin: left;
 }
 
-/* completed tasks */
+@media screen and (min-width: 700px) {
+    .section--addTask {
+        padding-block-start: 72px;
+        padding-block-end: 48px;
+    }
+    .title {
+        display: none;
+    }
+    .subtitle {
+        max-width: none;
+        font-size: 2.8rem;
+    }
+    .tasks__box {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        justify-items: start;
+    }
+}
