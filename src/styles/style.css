@@ -146,16 +146,19 @@ body {
 }
 .tasks__item__text {
     position: relative;
+    max-width: calc(100% - 48px);
     font-size: 1.6rem;
     font-weight: 500;
     transition: all .3s;
-    display: block;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
 }
 .tasks__item__text::after {
     transition: all .3s;
     content: "";
     position: absolute;
-    bottom: .8rem;
+    top: .8rem;
     left: 0;
     width: 100%;
     height: 2px;
