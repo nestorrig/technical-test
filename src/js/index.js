@@ -1,20 +1,15 @@
+// variabales
 const input = document.getElementById('FormInput');
 const button = document.getElementById('FormButton');
 const tasksBox = document.getElementById('TasksBox');
 const tasksCompletedBox = document.getElementById('TasksCompletedBox');
 
-const tasks = document.querySelectorAll('.tasks__item');
+// tareas
+let tasks
 const tasksUncompleted = []
 const tasksCompleted = [];
 
-tasks.forEach(task => {
-    if (task.parentElement.id === 'TasksBox') {
-        tasksUncompleted.push(task)
-    } else {
-        tasksCompleted.push(task)
-    }
-});
-
+// Añadir tareas inicia
 button.addEventListener('click', addTask);
 window.addEventListener('keydown', enter);
 
@@ -31,8 +26,11 @@ function enter(e) {
 function addTask() {
     if (input.value.length === 0) {
         console.log('escribe algo');
-        return
+        return // se para la funcion si no hay nada escrito
     }
+    // buscamos las nuevas tareas
+    tasks = document.querySelectorAll('.tasks__item')
+
     const id = tasks.length
     const newTask = document.createElement('div');
     newTask.classList = 'tasks__item';
@@ -49,3 +47,4 @@ function addTask() {
     tasksBox.appendChild(newTask);
     input.value = ''
 }
+// Añadir tareas termina
