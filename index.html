@@ -19,9 +19,17 @@
                 <h1 class="title">
                     My tasks
                 </h1>
-                <a class="proLink" href="./pro">
-                    Try pro
-                </a>
+                <div class="pro__container">
+                    <button class="change__color__button" id="ChangeColorButton">
+                    </button>
+                    <div class="change__accentColor">
+                        <button class="color" id="blue"></button>
+                        <button class="color" id="yellow"></button>
+                        <button class="color" id="orange"></button>
+                        <button class="color" id="green"></button>
+                        <button class="color" id="pink"></button>
+                    </div>
+                </div>
             </article>
             <form class="form__container">
                 <label for="FormInput" class="form__label">
@@ -31,6 +39,9 @@
                         type="text"
                         placeholder="Add new task"
                     >
+                    <span class="form__span" id="Placeholder">
+                        Add new task
+                    </span>
                 </label>
                 <button class="form__button" id="FormButton" type="button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">

@@ -12,28 +12,6 @@ body {
     color: var(--secondary);
 }
 
-@keyframes proLink__line {
-    0%, 25% {
-        transform: scaleX(0);
-        transform-origin: left;
-    }
-    25%, 50% {
-        transform: scaleX(1);
-        transform-origin: left;
-    }
-    50% {
-        transform-origin: right;
-    }
-    50%, 75% {
-        transform: scaleX(1);
-        transform-origin: right;
-    }
-    75%, 100% {
-        transform: scaleX(0);
-        transform-origin: right;
-    }
-}
-
 .section {
     padding-inline: 24px;
     padding-block-start: 56px;
@@ -48,27 +26,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.proLink {
-    position: relative;
-    font-size: 1.8rem;
-    font-weight: 500;
-    transition: all .1s;
-}
-.proLink::after {
-    position: absolute;
-    content: "";
-    left: 0;
-    bottom: 0;
-    height: 2px;
-    width: 100%;
-    background-color: var(--secondary);
-    transform: scaleX(0);
-    transform-origin: left;
-    animation: proLink__line 2s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
-}
-.proLink:hover {
-    transform: scale(1.1);
 }
 .title {
     font-size: 2.4rem;
@@ -92,7 +49,6 @@ body {
     justify-content: space-between;
 
     border-radius: 16px;
-    background: #38404B;
     box-shadow: 
     3px 3px 8px 0px rgba(46, 53, 62, 0.90) inset,
     -3px -3px 6px 0px rgba(66, 75, 88, 0.9) inset,
@@ -102,6 +58,7 @@ body {
     1px 1px 2px 0px rgba(66, 75, 88, 0.30);
 }
 .form__label {
+    position: relative;
     padding-inline: 16px;
     padding-block: 20px;
     width: calc(100% - 40px);
@@ -114,7 +71,7 @@ body {
 }
 .form__input::placeholder {
     color: var(--secondary);
-    opacity: .7;
+    opacity: 0;
 }
 .form__button {
     width: 44px;
@@ -131,7 +88,22 @@ body {
 .form__button:active {
     transform: scale(.9);
 }
-
+.form__button path {
+    stroke: var(--secondary);
+}
+.form__span {
+    position: absolute;
+    font-size: 1.6rem;
+    opacity: .7;
+    top: 20px;
+    left: 24px;
+    transition: all .3s;
+}
+.form__span--active{
+    top: -24px;
+    left: 0;
+    font-size: 1.2rem;
+}
 /* tasks */
 .tasks__box {
     display: grid;
@@ -214,7 +186,73 @@ body {
     transform: scaleX(0%);
     transform-origin: left;
 }
+/* Colores */
+.pro__container {
+    position: relative;
+}
+.change__color__button {
+    /* margin: 8px; */
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #2d303a;
+    border-radius: 50%;
+    background-color: var(--secondary);
+}
+.change__accentColor {
+    position: absolute;
+    top: 48px;
+    right: calc(50% - 24px);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: #2d303a;
+    border-radius: 16px;
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
 
+    &.opacity {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+.color {
+    width: 24px;
+    height: 24px;
+    border: 2px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .3s;
+
+    /* Usamos nested CSS para mantener esta parte
+    del código mas amigable */
+    &#blue {
+        color: #94ADCF;
+        background-color: #94ADCF;
+    }
+    &#yellow {
+        color: #ffef69;
+        background-color: #ffef69;
+    }
+    &#orange {
+        color: #fb916a;
+        background-color: #fb916a;
+    }
+    &#green {
+        color: #61bc84;
+        background-color: #61bc84;
+    }
+    &#pink {
+        color: #ffadad;
+        background-color: #ffadad;
+    }
+}
+.color:hover {
+    border-color: var(--primary) ;
+}
+/* responsive */
 @media screen and (min-width: 700px) {
     .section--addTask {
         padding-block-start: 72px;
