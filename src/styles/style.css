@@ -12,6 +12,28 @@ body {
     color: var(--secondary);
 }
 
+@keyframes proLink__line {
+    0%, 25% {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    25%, 50% {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    50% {
+        transform-origin: right;
+    }
+    50%, 75% {
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    75%, 100% {
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+}
+
 .section {
     padding-inline: 24px;
     padding-block-start: 56px;
@@ -21,10 +43,36 @@ body {
 .section--tasksCompleted {
     padding-block-end: 64px;
 }
+.section--addTask > article {
+    margin-block-end: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.proLink {
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 500;
+    transition: all .1s;
+}
+.proLink::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--secondary);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: proLink__line 2s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+}
+.proLink:hover {
+    transform: scale(1.1);
+}
 .title {
     font-size: 2.4rem;
     font-weight: 700;
-    margin-block-end: 40px;
 }
 .subtitle {
     max-width: 450px;
@@ -173,7 +221,7 @@ body {
         padding-block-end: 48px;
     }
     .title {
-        display: none;
+        visibility: hidden;
     }
     .subtitle {
         max-width: none;
