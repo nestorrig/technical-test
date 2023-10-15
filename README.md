@@ -13,7 +13,7 @@ agregando.
 completados.
 
 ### Aqui un ejemplo
-> [](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWNqOHhyZndqbnV5YjltaTh6M3JhbGRvcml0b3N2ZGY0cThsYXE0byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hstysiozjK9avbJjbY/giphy.gif)
+[](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWNqOHhyZndqbnV5YjltaTh6M3JhbGRvcml0b3N2ZGY0cThsYXE0byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hstysiozjK9avbJjbY/giphy.gif)
 ## Responsividad
 El proyecto cuenta con un diseño responsivo que le permite adaptarse a cualquier dispositivo.
 ### Version desktop
@@ -28,8 +28,8 @@ Se han agregado algunos features adicionales, destacan los siguientes dos:
 
 ### 1. Custom colors
 Puedes decidir un color de preferencia para el sitio:
->  ![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHBsNGFhcGc5NGNqM293eWkxZWQ0c3NlOHJhb295cDB0cmhhMGphNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tVB0xhPKOoUhtA28C6/source.gif)
+ ![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHBsNGFhcGc5NGNqM293eWkxZWQ0c3NlOHJhb295cDB0cmhhMGphNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tVB0xhPKOoUhtA28C6/source.gif)
 
 ### 2. Placeholder estilo Google
 Un placeholder dinamico que sube a la parte superior del input cuando se empieza a escribir y regresa a su position original cuando se crea la tarea.
-> ![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExajFlaG43cnN6OWtqb3MydTltNWszYmFleXpxZzFhZDQxZWxud2I3NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8WT7wxUDm9mzrJkvXb/giphy.gif)
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExajFlaG43cnN6OWtqb3MydTltNWszYmFleXpxZzFhZDQxZWxud2I3NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8WT7wxUDm9mzrJkvXb/giphy.gif)
