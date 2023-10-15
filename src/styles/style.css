@@ -153,6 +153,7 @@ body {
     border: 2px solid var(--secondary);
     border-radius: 50%;
     background-color: transparent;
+    cursor: pointer;
     transition: all .3s;
 }
 .tasks__item__checkbox:checked ~ .tasks__item__label::after  {
