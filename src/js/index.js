@@ -4,17 +4,15 @@ const button = document.getElementById('FormButton');
 const tasksBox = document.getElementById('TasksBox');
 const tasksCompletedBox = document.getElementById('TasksCompletedBox');
 
-// tareas
-let tasks
-const tasksUncompleted = []
-const tasksCompleted = [];
 
-// Añadir tareas inicia
+/// <-- Añadir tareas inicia
 button.addEventListener('click', addTask);
 window.addEventListener('keydown', enter);
 
 function enter(e) {
+    // Validamos si nuestro input este activo
     if (document.activeElement === input) {
+        // Validamos que la tecla sea Enter
         if ( e.key === 'Enter') {
             e.preventDefault()
             addTask();
@@ -25,12 +23,12 @@ function enter(e) {
 
 function addTask() {
     if (input.value.length === 0) {
-        console.log('escribe algo');
-        return // se para la funcion si no hay nada escrito
+        // se para la funcion si no hay nada escrito
+        return
     }
     // buscamos las nuevas tareas
-    tasks = document.querySelectorAll('.tasks__item')
-
+    const tasks = document.querySelectorAll('.tasks__item')
+    // Generamos la tarea
     const id = tasks.length
     const newTask = document.createElement('div');
     newTask.classList = 'tasks__item';
@@ -42,9 +40,43 @@ function addTask() {
             ${input.value}
         </span>
     `;
-
-    tasksUncompleted.push(newTask);
+    // Añadimos la tarea
     tasksBox.appendChild(newTask);
     input.value = ''
+    addEventToBoxes() // añadimos evento al nuevo checkbox
 }
-// Añadir tareas termina
+/// Añadir tareas termina -->
+
+
+/// <-- Cambiar estado de tareas inicia
+
+// Añadimos el evento a checkboxs existentes
+addEventToBoxes() 
+
+function addEventToBoxes() {
+    // buscamos los checkboxes
+    const checkBoxes = document.querySelectorAll('.tasks__item__checkbox');
+
+    checkBoxes.forEach(box => {
+        box.addEventListener('click', toogleTask)
+    });
+}
+function toogleTask(e) {
+    // Guardamos la tarea del checkbox
+    const checkTask = e.target.parentElement
+
+    // Averiguamos el estatus y lo cambiamos
+    if (checkTask.classList.contains('tasks__item--completed')) {
+        setTimeout(() => {
+            checkTask.classList.remove('tasks__item--completed')
+            tasksBox.append(checkTask)
+        }, 300);
+    } else {
+        setTimeout(() => {
+            checkTask.classList.add('tasks__item--completed')
+            tasksCompletedBox.append(checkTask)
+        }, 300);
+    }
+    // Se usa setTimeout para esperar la transicion en CSS
+}
+/// Cambiar estado de tareas termina -->
