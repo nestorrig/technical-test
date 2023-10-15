@@ -8,4 +8,139 @@ html {
 }
 body {
     font-family: 'Ubuntu', sans-serif;
+    background-color: var(--primary);
+    color: var(--secondary);
+
 }
+
+.section {
+    padding-inline: 24px;
+    padding-block-start: 56px;
+}
+.title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-block-end: 40px;
+}
+.subtitle {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-block-end: 40px;
+}
+
+/* formulario */
+
+.form__container {
+    max-width: 600px;
+    /* padding-inline-start: 40px; */
+
+    padding-inline-end: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    border-radius: 16px;
+    background: #38404B;
+    box-shadow: 
+    3px 3px 8px 0px rgba(46, 53, 62, 0.90) inset,
+    -3px -3px 6px 0px rgba(66, 75, 88, 0.9) inset,
+    3px -3px 6px 0px rgba(46, 53, 62, 0.20) inset,
+    -3px 3px 6px 0px rgba(46, 53, 62, 0.20) inset,
+    -1px -1px 2px 0px rgba(46, 53, 62, 0.50),
+    1px 1px 2px 0px rgba(66, 75, 88, 0.30);
+}
+.form__label {
+    padding-inline: 16px;
+    padding-block: 20px;
+    width: calc(100% - 40px);
+}
+.form__input {
+    padding-inline-start: 8px;
+    width: 100%;
+    font-size: 1.6rem;
+    outline: none;
+}
+.form__input::placeholder {
+    color: var(--secondary);
+    opacity: .7;
+}
+
+.form__button {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.form__button:active {
+    transform: scale(.9);
+}
+
+
+/* tasks */
+
+.tasks__box {
+    /* background-color: gray; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+.tasks__item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+
+    border-radius: 16px;
+    box-shadow: 
+    5px 5px 13px 0px rgba(48, 54, 64, 0.90),
+    -5px -5px 10px 0px rgba(64, 74, 86, 0.90),
+    5px -5px 10px 0px rgba(48, 54, 64, 0.20),
+    -5px 5px 10px 0px rgba(48, 54, 64, 0.20),
+    -1px -1px 2px 0px rgba(48, 54, 64, 0.50) inset,
+    1px 1px 2px 0px rgba(64, 74, 86, 0.30) inset;
+}
+.tasks__item__checkbox {
+    display: none;
+}
+.tasks__item__label {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+.tasks__item__label::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--secondary);
+    border-radius: 50%;
+    background-color: transparent;
+    transition: all .3s;
+}
+.tasks__item__checkbox:checked ~ .tasks__item__label::after  {
+    background-color: var(--secondary);
+}
+.tasks__item__checkbox:checked ~ .tasks__item__text::after  {
+    transform: scaleX(100%);
+}
+.tasks__item__text {
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: all .3s;
+}
+.tasks__item__text::after {
+    transition: all .3s;
+    content: "";
+    position: absolute;
+    bottom: .8rem;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondary);
+    transform: scaleX(0%);
+    transform-origin: left;
+}
+
+/* completed tasks */

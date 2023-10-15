@@ -19,7 +19,7 @@
                 My tasks
             </h1>
             <form class="form__container">
-                <label for="FormInput">
+                <label for="FormInput" class="form__label">
                     <input 
                         class="form__input" 
                         id="FormInput" 
@@ -28,7 +28,9 @@
                     >
                 </label>
                 <button class="form__button" type="button">
-                    >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                        <path fill="none" stroke="#94ADCF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 17l5-5m0 0l-5-5"></path>
+                    </svg>
                 </button>
             </form>
         </section>
@@ -36,19 +38,25 @@
         <section class="section section--tasks">
             <div class="tasks__box">
                 <div class="tasks__item">
-                    <input class="tasks__item__checkbox" type="checkbox">
+                    <input class="tasks__item__checkbox" type="checkbox" id="Task1">
+                    <label class="tasks__item__label" for="Task1">
+                    </label>
                     <span class="tasks__item__text">
                         Go shopping
                     </span>
                 </div>
                 <div class="tasks__item">
-                    <input class="tasks__item__checkbox" type="checkbox">
+                    <label class="tasks__item__label">
+                        <input class="tasks__item__checkbox" type="checkbox">
+                    </label>
                     <span class="tasks__item__text">
                         Short Exercise
                     </span>
                 </div>
                 <div class="tasks__item">
-                    <input class="tasks__item__checkbox" type="checkbox">
+                    <label class="tasks__item__label">
+                        <input class="tasks__item__checkbox" type="checkbox">
+                    </label>
                     <span class="tasks__item__text">
                         Meditation
                     </span>
@@ -57,20 +65,16 @@
         </section>
 
         <section class="section section--tasksCompleted">
-            <h2 class="title">
+            <h2 class="subtitle">
                 Completed
             </h2>
             <div class="tasks__box ">
                 <div class="tasks__item tasks__item--completed">
-                    <input class="tasks__item__checkbox" type="checkbox">
+                    <input class="tasks__item__checkbox" type="checkbox" id="Task2" checked>
+                    <label class="tasks__item__label" for="Task2">
+                    </label>
                     <span class="tasks__item__text">
-                        Do homework
-                    </span>
-                </div>
-                <div class="tasks__item tasks__item--completed">
-                    <input class="tasks__item__checkbox" type="checkbox">
-                    <span class="tasks__item__text">
-                        Readeing
+                        Go shopping
                     </span>
                 </div>
             </div>
